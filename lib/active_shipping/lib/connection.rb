@@ -164,7 +164,7 @@ module ActiveMerchant
     
     def log(level, message, tag)
       message = "[#{tag}] #{message}" if tag
-      logger.send(level, message) if logger
+      Rails.logger.send(level, message) if Rails.logger
     end
   end
 end

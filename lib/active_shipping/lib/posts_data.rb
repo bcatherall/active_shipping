@@ -33,7 +33,7 @@ module ActiveMerchant #:nodoc:
       connection.read_timeout = read_timeout
       connection.retry_safe   = retry_safe
       connection.verify_peer  = ssl_strict
-      connection.logger       = logger
+      connection.logger       = Rails.logger
       connection.tag          = self.class.name
       connection.wiredump_device = wiredump_device
       
